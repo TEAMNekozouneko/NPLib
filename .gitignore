@@ -1,3 +1,5 @@
 .gradle/
 .idea/
 dist/
+build/
+/gradle.properties
