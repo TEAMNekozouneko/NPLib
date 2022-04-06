@@ -3,7 +3,9 @@
 
 ## インストール方法
 ### Maven
+
 ```xml
+
 <project>
     <repositories>
         <repository>
@@ -11,10 +13,10 @@
             <url>https://nekozouneko.ddns.net/nexus/repository/nekorepo/</url>
         </repository>
     </repositories>
-    
+
     <dependencies>
         <dependency>
-            <groupId>com.nekozouneko.NPLib</groupId>
+            <groupId>com.nekozouneko.nplibcom.nekozouneko.nplib</groupId>
             <artifactId>nplib</artifactId>
             <version>1.0</version>
         </dependency>
@@ -28,6 +30,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nekozouneko.NPLib:nplib:1.0'
+    implementation 'com.nekozouneko.nplib:nplib:1.0'
 }
 ```
