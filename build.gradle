@@ -3,11 +3,40 @@ plugins {
     id 'maven-publish'
 }
 
+javadoc.options.encoding = 'UTF-8'
+javadoc.options.encoding = 'UTF-8'
+
 compileJava.options.encoding = 'UTF-8'
 compileTestJava.options.encoding = 'UTF-8'
 
 group 'com.nekozouneko.NPLib'
 version '1.0'
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/TEAMNekozouneko/NPLib")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            groupId = 'com.nekozouneko.NPLib'
+            version = '1.0'
+            artifactId = 'nplib'
+            from(components.java)
+        }
+    }
+}
+
+task javadocJar(type: Jar) {
+    from javadoc
+    classifier = 'javadoc'
+}
 
 repositories {
     mavenCentral()
@@ -21,6 +50,10 @@ repositories {
             includeGroup 'org.bukkit'
             includeGroup 'org.spigotmc'
         }
+    }
+
+    maven {
+        url = 'https://maven.pkg.github.com/TEAMNekozouneko/NPLib'
     }
 
     maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
