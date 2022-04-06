@@ -11,15 +11,17 @@
             <url>https://nekozouneko.ddns.net/nexus/repository/nekorepo/</url>
         </repository>
     </repositories>
-
-    <dependency>
-        <groupId>com.nekozouneko.NPLib</groupId>
-        <artifactId>nplib</artifactId>
-        <version>1.0</version>
-    </dependency>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.nekozouneko.NPLib</groupId>
+            <artifactId>nplib</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>
 ```
-
+### Gradle
 ```groovy
 repositories {
     maven { url = 'https://nekozouneko.ddns.net/nexus/repository/nekorepo/' }
