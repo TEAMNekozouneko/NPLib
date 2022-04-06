@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'maven-publish'
 }
 
 javadoc.options.encoding = 'UTF-8'
@@ -11,27 +10,6 @@ compileTestJava.options.encoding = 'UTF-8'
 
 group 'com.nekozouneko.NPLib'
 version '1.0'
-
-publishing {
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/TEAMNekozouneko/NPLib")
-            credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-            }
-        }
-    }
-    publications {
-        gpr(MavenPublication) {
-            groupId = 'com.nekozouneko.NPLib'
-            version = '1.0'
-            artifactId = 'nplib'
-            from(components.java)
-        }
-    }
-}
 
 task javadocJar(type: Jar) {
     from javadoc
@@ -52,10 +30,6 @@ repositories {
         }
     }
 
-    maven {
-        url = 'https://maven.pkg.github.com/TEAMNekozouneko/NPLib'
-    }
-
     maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url = 'https://oss.sonatype.org/content/repositories/central' }
 }
@@ -65,6 +39,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 
     compileOnly 'org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT'
+
 }
 
 test {
