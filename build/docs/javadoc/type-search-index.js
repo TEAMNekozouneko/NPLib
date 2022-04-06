@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.nekozouneko.nplib.chat","l":"ChatCode"},{"p":"com.nekozouneko.nplib","l":"NPLib"},{"p":"com.nekozouneko.nplib.chat","l":"PlayerSender"}];updateSearchResults();
