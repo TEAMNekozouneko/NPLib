@@ -1,6 +1,6 @@
-package com.nekozouneko.NPLib.chat;
+package com.nekozouneko.nplib.chat;
 
-import com.nekozouneko.NPLib.NPLib;
+import com.nekozouneko.nplib.NPLib;
 
 public final class ChatCode {
 

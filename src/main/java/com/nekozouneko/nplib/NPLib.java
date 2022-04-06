@@ -1,11 +1,10 @@
-package com.nekozouneko.NPLib;
+package com.nekozouneko.nplib;
 
 /**
  * @author Taitaitatata
  * @version 1.0
  */
 public final class NPLib {
-
     /**
      * 複数のテキストと比較します。
      * @param equals_str 比較元のテキスト
