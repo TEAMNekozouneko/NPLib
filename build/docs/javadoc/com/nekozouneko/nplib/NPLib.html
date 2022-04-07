@@ -77,6 +77,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">NPLib</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="java.lang内のクラスまたはインタフェース" class="external-link">Object</a></span></div>
+<div class="block">NPLibはBukkit / Spigotプラグインの簡単なユーティリティ関数軍です。</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -109,6 +110,46 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="java.lang内のクラスまたはインタフェース" class="external-link">String</a>...&nbsp;strings)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">複数のテキストと比較します。</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#secondToTick(double)" class="member-name-link">secondToTick</a><wbr>(double&nbsp;second)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">秒数からティックに変換します。</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#secondToTick(int)" class="member-name-link">secondToTick</a><wbr>(int&nbsp;second)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">秒数からティックに変換します。</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#secondToTick(long)" class="member-name-link">secondToTick</a><wbr>(long&nbsp;second)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">秒数からティックに変換します。</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#secondToTick(short)" class="member-name-link">secondToTick</a><wbr>(short&nbsp;second)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">秒数からティックに変換します。</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tickToSecond(double)" class="member-name-link">tickToSecond</a><wbr>(double&nbsp;tick)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">ティックから秒数に変換します。</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tickToSecond(int)" class="member-name-link">tickToSecond</a><wbr>(int&nbsp;tick)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">ティックから秒数に変換します。</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tickToSecond(long)" class="member-name-link">tickToSecond</a><wbr>(long&nbsp;tick)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">ティックから秒数に変換します。</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#tickToSecond(short)" class="member-name-link">tickToSecond</a><wbr>(short&nbsp;tick)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">ティックから秒数に変換します。</div>
 </div>
 </div>
 </div>
@@ -153,6 +194,110 @@ loadScripts(document, 'script');</script>
 <dd><code>strings</code> - 比較する複数のテキスト</dd>
 <dt>戻り値:</dt>
 <dd>比較した時同一テキストがあるかどうか</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="tickToSecond(double)">
+<h3>tickToSecond</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">tickToSecond</span><wbr><span class="parameters">(double&nbsp;tick)</span></div>
+<div class="block">ティックから秒数に変換します。</div>
+<dl class="notes">
+<dt>パラメータ:</dt>
+<dd><code>tick</code> - ティック</dd>
+<dt>戻り値:</dt>
+<dd>秒数</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="tickToSecond(int)">
+<h3>tickToSecond</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">tickToSecond</span><wbr><span class="parameters">(int&nbsp;tick)</span></div>
+<div class="block">ティックから秒数に変換します。</div>
+<dl class="notes">
+<dt>パラメータ:</dt>
+<dd><code>tick</code> - ティック</dd>
+<dt>戻り値:</dt>
+<dd>秒数</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="tickToSecond(long)">
+<h3>tickToSecond</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">tickToSecond</span><wbr><span class="parameters">(long&nbsp;tick)</span></div>
+<div class="block">ティックから秒数に変換します。</div>
+<dl class="notes">
+<dt>パラメータ:</dt>
+<dd><code>tick</code> - ティック</dd>
+<dt>戻り値:</dt>
+<dd>秒数</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="tickToSecond(short)">
+<h3>tickToSecond</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">tickToSecond</span><wbr><span class="parameters">(short&nbsp;tick)</span></div>
+<div class="block">ティックから秒数に変換します。</div>
+<dl class="notes">
+<dt>パラメータ:</dt>
+<dd><code>tick</code> - ティック</dd>
+<dt>戻り値:</dt>
+<dd>秒数</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="secondToTick(double)">
+<h3>secondToTick</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">secondToTick</span><wbr><span class="parameters">(double&nbsp;second)</span></div>
+<div class="block">秒数からティックに変換します。</div>
+<dl class="notes">
+<dt>パラメータ:</dt>
+<dd><code>second</code> - 秒数</dd>
+<dt>戻り値:</dt>
+<dd>ティック</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="secondToTick(int)">
+<h3>secondToTick</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">secondToTick</span><wbr><span class="parameters">(int&nbsp;second)</span></div>
+<div class="block">秒数からティックに変換します。</div>
+<dl class="notes">
+<dt>パラメータ:</dt>
+<dd><code>second</code> - 秒数</dd>
+<dt>戻り値:</dt>
+<dd>ティック</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="secondToTick(long)">
+<h3>secondToTick</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">secondToTick</span><wbr><span class="parameters">(long&nbsp;second)</span></div>
+<div class="block">秒数からティックに変換します。</div>
+<dl class="notes">
+<dt>パラメータ:</dt>
+<dd><code>second</code> - 秒数</dd>
+<dt>戻り値:</dt>
+<dd>ティック</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="secondToTick(short)">
+<h3>secondToTick</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">secondToTick</span><wbr><span class="parameters">(short&nbsp;second)</span></div>
+<div class="block">秒数からティックに変換します。</div>
+<dl class="notes">
+<dt>パラメータ:</dt>
+<dd><code>second</code> - 秒数</dd>
+<dt>戻り値:</dt>
+<dd>ティック</dd>
 </dl>
 </section>
 </li>
