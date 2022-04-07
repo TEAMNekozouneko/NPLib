@@ -18,7 +18,7 @@
         <dependency>
             <groupId>com.nekozouneko.nplibcom.nekozouneko.nplib</groupId>
             <artifactId>nplib</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
         </dependency>
     </dependencies>
 </project>
@@ -30,6 +30,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nekozouneko.nplib:nplib:1.1'
+    implementation 'com.nekozouneko.nplib:nplib:1.2'
 }
 ```
