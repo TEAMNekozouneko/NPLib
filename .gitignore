@@ -1,8 +1,5 @@
 .gradle/
 .idea/
 dist/
-/build/classes/
-/build/generated/
-/build/libs/
-/build/tmp/
+build/
 /gradle.properties
