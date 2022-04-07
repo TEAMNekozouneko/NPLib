@@ -1,7 +1,4 @@
-/.gradle/
 /.idea/
+/.gradle/
 /dist/
-/build/*
 /build/
-javadocs
-/gradle.properties
