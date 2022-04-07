@@ -9,7 +9,7 @@ compileJava.options.encoding = 'UTF-8'
 compileTestJava.options.encoding = 'UTF-8'
 
 group 'com.nekozouneko.nplib'
-version '1.1'
+version '1.2'
 
 task javadocJar(type: Jar) {
     from javadoc
