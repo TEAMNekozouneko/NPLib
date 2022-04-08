@@ -5,16 +5,17 @@ import org.yaml.snakeyaml.Yaml;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 public class PluginConfiguration {
 
     private final JavaPlugin instance;
     private final InputStream ConfigFile;
+    private final String fileName;
 
-    private final Map<Object, Object> ConfigMap;
+    private Map<Object, Object> ConfigMap;
 
     private final Yaml yml = new Yaml();
 
@@ -26,6 +27,7 @@ public class PluginConfiguration {
      */
     public PluginConfiguration(@Nonnull JavaPlugin plugin, String resourceConfigFile) throws IOException {
         this.instance = plugin;
+        this.fileName = resourceConfigFile;
         if (instance.getResource(resourceConfigFile) == null) throw new IOException("Plugin resource file \"" + resourceConfigFile + "\" is not found!");
         else ConfigFile = instance.getResource(resourceConfigFile);
 
@@ -57,6 +59,55 @@ public class PluginConfiguration {
             }
             return null;
         }
+    }
+
+    /**
+     * 設定ファイルを保存します。
+     * @param isForceSave 強制保存するか
+     * @throws IOException ファイルの入出力や権限問題が発生したときに流れます。
+     */
+    public void save(boolean isForceSave) throws IOException {
+        File configPath = new File(instance.getDataFolder(), fileName);
+        if (!isForceSave) {
+            if (!configPath.exists()) {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(ConfigFile, StandardCharsets.UTF_8));
+                String readStr;
+                StringBuilder appender = new StringBuilder();
+
+                while ((readStr = reader.readLine()) != null) {
+                    appender.append(readStr);
+                }
+
+                String output = appender.toString();
+
+                FileWriter writer = new FileWriter(configPath);
+                writer.write(output);
+            }
+        } else {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(ConfigFile, StandardCharsets.UTF_8));
+            String readStr;
+            StringBuilder appender = new StringBuilder();
+
+            while ((readStr = reader.readLine()) != null) {
+                appender.append(readStr);
+            }
+
+            String output = appender.toString();
+
+            FileWriter writer = new FileWriter(configPath);
+            writer.write(output);
+        }
+    }
+
+    /**
+     * 設定ファイルを再読み込みします。
+     * @throws IOException 権限や入出力エラー
+     */
+    public void reload() throws IOException {
+        File configPath = new File(instance.getDataFolder(), fileName);
+
+        Iterable<Object> ConfigObj = yml.loadAll(ConfigFile);
+        ConfigMap = (Map<Object, Object>) ConfigObj;
     }
 
 }
