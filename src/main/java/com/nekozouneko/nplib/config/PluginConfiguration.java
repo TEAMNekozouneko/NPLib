@@ -50,9 +50,9 @@ public class PluginConfiguration {
         else {
             Map<Object, Object> CfgMap = ConfigMap;
             for (String k : path) {
-                if (path[path.length-1].equalsIgnoreCase(k)) return null;
+                if (path[path.length-1].equalsIgnoreCase(k)) return CfgMap.get(k);
                 else {
-                    
+                    CfgMap = (Map<Object, Object>) CfgMap.get(k);
                 }
             }
             return null;
