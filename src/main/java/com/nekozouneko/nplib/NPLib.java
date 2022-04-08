@@ -5,7 +5,7 @@ import com.nekozouneko.nplib.config.PluginConfiguration;
 /**
  * NPLibはBukkit / Spigotプラグインの簡単なユーティリティ関数軍です。
  * @author Taitaitatata
- * @version 1.3-rc2
+ * @version 1.3-rc3
  */
 public final class NPLib {
     /**

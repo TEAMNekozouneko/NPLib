@@ -15,7 +15,7 @@ public class PluginConfiguration {
     private final InputStream ConfigFile;
     private final String fileName;
 
-    private Map<String, Object> ConfigMap;
+    private Map ConfigMap;
 
     private final Yaml yml = new Yaml();
 
@@ -32,7 +32,7 @@ public class PluginConfiguration {
         else ConfigFile = instance.getResource(resourceConfigFile);
 
         Iterable<Object> ConfigObj = yml.loadAll(ConfigFile);
-        ConfigMap = (Map<String, Object>) ConfigObj;
+        ConfigMap = (Map) ConfigObj;
     }
 
     /**
@@ -54,7 +54,7 @@ public class PluginConfiguration {
             for (String k : path) {
                 if (path[path.length-1].equalsIgnoreCase(k)) return CfgMap.get(k);
                 else {
-                    CfgMap = (Map<String, Object>) CfgMap.get(k);
+                    CfgMap = (Map) CfgMap.get(k);
                 }
             }
             return null;
@@ -107,7 +107,7 @@ public class PluginConfiguration {
         File configPath = new File(instance.getDataFolder(), fileName);
 
         Iterable<Object> ConfigObj = yml.loadAll(ConfigFile);
-        ConfigMap = (Map<String, Object>) ConfigObj;
+        ConfigMap = (Map) ConfigObj;
     }
 
 }
