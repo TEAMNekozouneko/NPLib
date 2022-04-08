@@ -16,7 +16,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.nekozouneko.nplibcom.nekozouneko.nplib</groupId>
+            <groupId>com.nekozouneko.nplib</groupId>
             <artifactId>nplib</artifactId>
             <version>1.2</version>
         </dependency>
