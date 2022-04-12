@@ -1,7 +1,5 @@
 package com.nekozouneko.nplib;
 
-import com.nekozouneko.nplib.config.PluginConfiguration;
-
 /**
  * NPLibはBukkit / Spigotプラグインの簡単なユーティリティ関数軍です。
  * @author Taitaitatata

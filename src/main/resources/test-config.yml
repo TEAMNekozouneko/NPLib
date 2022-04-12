@@ -1,7 +1,0 @@
-Bukkit:
-  old: true
-  fork: null
-
-Spigot:
-  old: false
-  fork: ["Paper"]
