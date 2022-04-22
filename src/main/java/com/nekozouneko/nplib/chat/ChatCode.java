@@ -19,7 +19,7 @@ public final class ChatCode {
     public final static String RED = "§c";
     public final static String LIGHT_PURPLE = "§d";
     public final static String YELLOW = "§e";
-    public final static String WHILE = "§f";
+    public final static String WHITE = "§f";
 
     public final static String OBFUSCATED = "§k";
     public final static String BOLD = "§l";
@@ -50,7 +50,7 @@ public final class ChatCode {
         else if (NPLib.equalsStrings(color, "RED", "red", "c", "Red")) return RED;
         else if (NPLib.equalsStrings(color, "LIGHT_PURPLE", "light_purple", "d", "Light_purple", "Light_Purple")) return LIGHT_PURPLE;
         else if (NPLib.equalsStrings(color, "YELLOW", "yellow", "e", "Yellow")) return YELLOW;
-        else if (NPLib.equalsStrings(color, "WHITE", "white", "f", "White")) return WHILE;
+        else if (NPLib.equalsStrings(color, "WHITE", "white", "f", "White")) return WHITE;
         // 装飾コード達やでぇ
         else if (NPLib.equalsStrings(color, "OBFUSCATED", "obfuscated", "k", "Obfuscated")) return OBFUSCATED;
         else if (NPLib.equalsStrings(color, "BOLD", "bold", "l", "Bold")) return BOLD;
@@ -60,6 +60,33 @@ public final class ChatCode {
         else if (NPLib.equalsStrings(color, "RESET", "reset", "r", "Reset")) return RESET;
         // 404
         else return null;
+    }
+
+    /**
+     * cpをカラーコードに変換
+     * @param cp §からカラーコードに置き換えするもの
+     * @param str テキスト
+     * @return
+     */
+    public static String toColorCode(String cp, String str) {
+        return str.replaceAll("\\\\"+cp, cp)
+                .replaceAll(cp+"a", "§a").replaceAll(cp+"A", "§a")
+                .replaceAll(cp+"b", "§b").replaceAll(cp+"B", "§b")
+                .replaceAll(cp+"c", "§c").replaceAll(cp+"C", "§c")
+                .replaceAll(cp+"d", "§d").replaceAll(cp+"D", "§d")
+                .replaceAll(cp+"e", "§e").replaceAll(cp+"E", "§e")
+                .replaceAll(cp+"f", "§f").replaceAll(cp+"F", "§f")
+                .replaceAll(cp+"k", "§k").replaceAll(cp+"K", "§k")
+                .replaceAll(cp+"l", "§l").replaceAll(cp+"L", "§l")
+                .replaceAll(cp+"m", "§m").replaceAll(cp+"M", "§m")
+                .replaceAll(cp+"n", "§n").replaceAll(cp+"N", "§n")
+                .replaceAll(cp+"o", "§o").replaceAll(cp+"O", "§o")
+                .replaceAll(cp+"r", "§r").replaceAll(cp+"R", "§r")
+                .replaceAll(cp+"0", "§0").replaceAll(cp+"1", "§1")
+                .replaceAll(cp+"2", "§2").replaceAll(cp+"3", "§3")
+                .replaceAll(cp+"4", "§4").replaceAll(cp+"5", "§5")
+                .replaceAll(cp+"6", "§6").replaceAll(cp+"7", "§7")
+                .replaceAll(cp+"8", "§8").replaceAll(cp+"9", "§9");
     }
 
 }
